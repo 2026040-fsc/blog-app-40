@@ -6,5 +6,5 @@ public class blogController {
     public String blogs() {
         return ("/blog");
     }
-    
+    //ko
 }
