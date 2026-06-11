@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ブログ一覧</title>
+    <style>
+        .btn-new {
+            display: inline-block;
+            background-color: #007bff; /*ボタンの背景色（青） */
+            color: white;             /* 文字の色（白） */
+            padding: 8px 16px;        /* ボタンの内側の余白 */
+            text-decoration: none;    /* リンクの下線を消す */
+            
+        }
+        </style>
 </head>
+
 <body>
-    <h1>spring</h1>
+ 
+    <nav class="nav">
+        <ul>
+            <h1>BLOG</h1>
+            <a href="/blog">ホーム</a>
+            <a href="/blog/new" class="btn-new">投稿</a>
+            
+        </ul>
+        <ul>
+            <li th:each="blog : ${blogs}">
+            <!-- <li th:text="${blog.title}"></li> -->
+            <a th:href="@{/blog/{id}(id=${blog.id})}" th:text="${blog.title}">タイトル</a> 
+            </li>
+        </ul>
+    </nav>
 </body>
+
 </html>
