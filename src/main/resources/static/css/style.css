@@ -1,0 +1,25 @@
+/* .btn-new {
+    display: inline-block;
+    background-color: #00ffea;
+    /*ボタンの背景色（青） */
+    /* color: white; */
+    /* 文字の色（白） */
+    /* padding: 8px 16px; */
+    /* ボタンの内側の余白 */
+    /* text-decoration: none; */
+    /* リンクの下線を消す */
+
+/* }  */
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* 上下の中央揃え */
+  padding: 16px 24px;   /* ヘッダーの内側の余白（上下 16px、左右 24px） */
+  border-bottom: 1px solid #e5e5e5; /* 下の区切り線 */
+}
+
+.header-nav {
+  display: flex;
+  gap: 16px; /* リンク同士の間隔を 16px に設定 */
+}

@@ -9,14 +9,17 @@
 </head>
 
 <body>
+    <header class="site-header">
     <div>
         <ul>
             <h1>BLOG</h1>
+            <nav class="header-nav">
             <a href="/blog">ホーム</a>
             <a href="/blog/new" class="btn-new">投稿</a>
-            
+            </nav>
         </ul>
     </div>
+    </header>
     <form th:action="@{/saveblog}" th:object="${blog}" method="Post">
         
         <input id="taskMemo" name="title" placeholder="タイトル"></input>

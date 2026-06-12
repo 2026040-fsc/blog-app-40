@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>ブログ詳細</title>
 </head>
 <body>
+    <header class="site-header">
     <div>
         <ul>
             <h1>BLOG</h1>
+            <nav class="header-nav">
             <a href="/blog">ホーム</a>
             <a href="/blog/new" class="btn-new">投稿</a>
-            
+            </nav>
         </ul>
     </div>
+    </header>
     <div>
         <h1>ブログ詳細</h1>
         
         <div>
             <h2>タイトル</h2>
-            <p th:text="${blog.title}">ここにタイトルが表示されます</p>
+            <p th:text="${blog.title}">ここにタイトルが表示される</p>
         </div>
         
         <br>
         
         <div>
             <h2>本文</h2>
-            <p th:text="${blog.text}">ここに本文が表示されます</p>
+            <p th:text="${blog.text}">ここに本文が表示される</p>
         </div>
         
         <br>

@@ -27,11 +27,11 @@ public class BlogRepository {
 
     } 
 
-    // 💡 BlogRepository の中（saveメソッドの下など）に追記してください
+    
     public Blog findById(Long id) {
         return jdbcClient.sql("SELECT * FROM blog WHERE id = :id")
                 .param("id", id)
                 .query(Blog.class)
-                .single(); // 🎯 1件だけ取得して返す
+                .single(); //  1件だけ取得して返す
     }
 }
